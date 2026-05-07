@@ -349,7 +349,7 @@
 
 <!-- Hero -->
 <div class="hero">
-  <p class="hero-label">Data Science Portfolio &mdash; Project 1</p>
+  <p class="hero-label">Data Science Portfolio: Project 1</p>
   <h1>Predicting <span>Formula 1</span><br/>Podium Finishes</h1>
   <p class="hero-sub">Can qualifying position and constructor standings reliably predict race outcomes? A binary classification analysis across 15 seasons of F1 data (2010&ndash;2024).</p>
   <div class="mb-4">
@@ -405,7 +405,7 @@
         <div class="card">
           <div class="card-label">Data Source</div>
           <h3>Jolpica F1 API</h3>
-          <p>Race results, qualifying positions, and constructor standings extracted via REST API &mdash; a community-maintained source covering F1 from 1950 to present.</p>
+          <p>Race results, qualifying positions, and constructor standings extracted via REST API, a community-maintained source covering F1 from 1950 to present.</p>
           <p class="mb-0">Filtered to 2010&ndash;2024 to exclude pre-hybrid dominant eras that would skew model behaviour.</p>
         </div>
       </div>
@@ -437,7 +437,7 @@
           <img src="qualifying_vs_finish.png" alt="Qualifying Position vs Race Finish Position">
           <div class="chart-card-body">
             <div class="card-label">Chart 1</div>
-            <p>Qualifying position vs race finish position &mdash; 500-race sample confirming a strong positive relationship between grid and final result.</p>
+            <p>Qualifying position vs race finish position (500-race sample), confirming a strong positive relationship between grid and final result.</p>
           </div>
         </div>
       </div>
@@ -446,7 +446,7 @@
           <img src="podium_conversion.png" alt="Podium Conversion Rate by Grid Position">
           <div class="chart-card-body">
             <div class="card-label">Chart 2</div>
-            <p>Podium conversion rate by grid position &mdash; a steep decay beyond P3, with near-zero conversion rates outside the top 10.</p>
+            <p>Podium conversion rate by grid position, showing a steep decay beyond P3 with near-zero conversion rates outside the top 10.</p>
           </div>
         </div>
       </div>
@@ -463,8 +463,8 @@
         <div class="chart-card">
           <img src="confusion_matrix.png" alt="Confusion Matrix - Logistic Regression">
           <div class="chart-card-body">
-            <div class="card-label">Chart 4 &mdash; Logistic Regression</div>
-            <p>Confusion matrix showing a high true positive rate and low false negative count &mdash; consistent with the 0.926 recall figure.</p>
+            <div class="card-label">Chart 4: Logistic Regression</div>
+            <p>Confusion matrix showing a high true positive rate and low false negative count, consistent with the 0.926 recall figure.</p>
           </div>
         </div>
       </div>
@@ -472,7 +472,7 @@
         <div class="chart-card">
           <img src="feature_importance.png" alt="Feature Importance - Random Forest">
           <div class="chart-card-body">
-            <div class="card-label">Chart 5 &mdash; Random Forest</div>
+            <div class="card-label">Chart 5: Random Forest</div>
             <p>Feature importance rankings confirm qualifying position as the strongest predictor, followed by constructor championship points.</p>
           </div>
         </div>
@@ -529,7 +529,7 @@
           <div class="card-label">Recommended Model</div>
           <h3>Logistic Regression</h3>
           <p>In a sports prediction context, missing a genuine podium finish is a more costly error than a false alarm. A recall of <strong class="hi">0.926</strong> means the model correctly identifies 9 in every 10 podium finishes from pre-race data alone.</p>
-          <p class="mb-0">Accuracy alone is misleading here &mdash; with 85.8% of results being non-podium, a naive classifier would score ~86% by predicting nothing. Recall and F1 are the meaningful criteria.</p>
+          <p class="mb-0">Accuracy alone is misleading here: with 85.8% of results being non-podium, a naive classifier would score ~86% by predicting nothing. Recall and F1 are the meaningful criteria.</p>
         </div>
       </div>
       <div class="col-12">
@@ -553,7 +553,7 @@
         <div class="card">
           <div class="card-label">Model Selection</div>
           <h3>Why these two models?</h3>
-          <p><strong class="hi">Logistic Regression</strong> provides an interpretable baseline &mdash; appropriate for binary classification and well-suited to communicating results to non-technical stakeholders.</p>
+          <p><strong class="hi">Logistic Regression</strong> provides an interpretable baseline, appropriate for binary classification and well-suited to communicating results to non-technical stakeholders.</p>
           <p><strong class="hi">Random Forest</strong> captures nonlinear feature interactions that Logistic Regression cannot represent, and provides feature importance rankings as an additional interpretability layer.</p>
           <p class="mb-0">Both models were trained with <code style="color:var(--accent); font-size:0.85rem;">class_weight='balanced'</code> to account for the 1:6 class imbalance.</p>
         </div>
@@ -562,9 +562,9 @@
         <div class="card">
           <div class="card-label">Train / Test Split</div>
           <h3>Season-based split</h3>
-          <p>Training: seasons 2010&ndash;2020 &mdash; 4,610 rows, podium rate 13.99%<br/>
-          Test: seasons 2021&ndash;2024 &mdash; 1,798 rows, podium rate 15.02%</p>
-          <p class="mb-0">A random split was avoided because races within the same season share competitive dynamics. A season-based split evaluates the model's ability to generalise to entirely unseen seasons &mdash; the more rigorous and realistic test.</p>
+          <p>Training: seasons 2010&ndash;2020, 4,610 rows, podium rate 13.99%<br/>
+          Test: seasons 2021&ndash;2024, 1,798 rows, podium rate 15.02%</p>
+          <p class="mb-0">A random split was avoided because races within the same season share competitive dynamics. A season-based split evaluates the model's ability to generalise to entirely unseen seasons, making it the more rigorous and realistic test.</p>
         </div>
       </div>
       <div class="col-lg-6">
@@ -573,7 +573,7 @@
           <h3>Ethical Considerations</h3>
           <p><strong class="hi">Bias:</strong> The training window (2010&ndash;2020) includes sustained Mercedes dominance, risking overfitting to team-specific patterns that may not generalise.</p>
           <p><strong class="hi">Privacy:</strong> All data is publicly available professional sporting performance. No personal or sensitive data is included.</p>
-          <p class="mb-0"><strong class="hi">Fairness:</strong> The model is descriptive and predictive only &mdash; not used to make decisions about individuals.</p>
+          <p class="mb-0"><strong class="hi">Fairness:</strong> The model is descriptive and predictive only, not used to make decisions about individuals.</p>
         </div>
       </div>
       <div class="col-lg-6">
@@ -581,7 +581,7 @@
           <div class="card-label">Future Iterations</div>
           <h3>Next Steps</h3>
           <p>Gradient Boosted Trees (e.g. XGBoost) would likely improve precision without sacrificing recall on this dataset.</p>
-          <p>Additional features &mdash; weather data, tyre strategy, recent driver form &mdash; would increase model expressiveness.</p>
+          <p>Additional features (weather data, tyre strategy, recent driver form) would increase model expressiveness.</p>
           <p class="mb-0">Extending the target from binary podium to full finishing order prediction represents a natural progression of this work.</p>
         </div>
       </div>
@@ -591,7 +591,7 @@
 
 <!-- Footer -->
 <footer>
-  <p>BP0323912 &mdash; BSc (Hons) Data Science, BPP University</p>
+  <p>BP0323912, BSc (Hons) Data Science, BPP University</p>
   <p class="mt-2"><a href="https://github.com/bp0323912/data-science-portfolio">github.com/bp0323912/data-science-portfolio</a></p>
 </footer>
 
